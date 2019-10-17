@@ -40,7 +40,9 @@
   height: 100vh;
   background-image: url("https://res.cloudinary.com/mostmojo/image/upload/v1568146877/1final.jpg");
   background-size: cover;
-  background-position: left; }
+  object-fit: contain;
+  background-position: left;
+  overflow: hidden; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
       background-image: url("https://res.cloudinary.com/mostmojo/image/upload/v1568146877/1final.jpg"); } }
@@ -51,10 +53,6 @@
   .header__logo {
     height: 3.5rem; }
   .header__text-box {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center; }
 
 .heading-primary {
@@ -64,7 +62,7 @@
   margin-left: 2rem; }
   .heading-primary--main {
     display: block;
-    font-size: 15rem;
+    font-size: 15vw;
     font-weight: 600;
     letter-spacing: 0.5rem;
     opacity: 0;
@@ -275,13 +273,14 @@ header {
   width: 100%;
   margin: auto;
   align-items: center;
-  justify-content: flex-end; }
+  justify-content: center; }
 
 a {
   color: #000;
   font-size: 16px !important;
   text-decoration: none;
-  margin-bottom: -0.8rem; }
+  margin-bottom: -0.8rem;
+  cursor: pointer; }
 
 .heading-elements {
   display: flex;
@@ -320,18 +319,15 @@ a {
   margin-top: 4px;
   font-size: 12px; }
 
-.cta {
-  text-decoration: none;
-  font-size: 0.8rem;
+a {
   cursor: pointer; }
 
-.cta p {
-  display: inline; }
+.cta {
+  text-decoration: none; }
 
 .cta img {
-  height: 24px;
-  width: 24px;
-  margin-top: 1rem; }
+  height: 28px;
+  margin-top: 1.3rem; }
 
 .construction {
   font-size: 14px !important;
@@ -371,7 +367,8 @@ a {
     font-size: 10px; }
   .cta {
     padding: 10px 0px 0px 0px;
-    margin-right: 1.6rem; } }
+    margin-right: 1.6rem;
+    cursor: pointer; } }
 
 .feature__icon {
   fill: white;
@@ -379,23 +376,40 @@ a {
   height: 4.5rem;
   transform: translateY(-1rem); }
 
-.social {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.social-1 {
   position: absolute;
-  bottom: 2rem;
+  bottom: 8rem;
   left: 2rem; }
+  @media screen and (max-width: 1024px) {
+    .social-1 {
+      bottom: 2rem;
+      left: 14rem; } }
+
+.social-2 {
+  position: absolute;
+  bottom: 4rem;
+  left: 2rem; }
+  @media screen and (max-width: 1024px) {
+    .social-2 {
+      bottom: 2rem;
+      left: 24rem; } }
 
 .logo {
   position: absolute;
   bottom: 0.64rem;
   left: 0.7rem;
   height: 8px; }
-
-li {
-  list-style: none; }
+  @media screen and (max-width: 1024px) {
+    .logo {
+      bottom: 2.5rem;
+      left: 2rem;
+      height: 14px; } }
 
 @media screen and (max-width: 1024px) {
   .studio-logo {
     width: 236px; } }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0; }

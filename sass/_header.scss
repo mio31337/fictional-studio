@@ -15,7 +15,8 @@ $gutter-horizontal: 6rem;
 	background-image: url("https://res.cloudinary.com/mostmojo/image/upload/v1568146877/1final.jpg");
 	background-size: cover;
 	object-fit: contain;
-	background-position: left;
+	background-position: center;
+	overflow: hidden;
 
 	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
 	  only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
@@ -34,10 +35,6 @@ $gutter-horizontal: 6rem;
 	}
 
 	&__text-box {
-	  position: absolute;
-	  top: 55%;
-	  left: 50%;
-	  transform: translate(-50%, -50%);
 	  text-align: center;
 	}
   }
@@ -52,7 +49,7 @@ $gutter-horizontal: 6rem;
 
 	&--main {
 	  display: block;
-	  font-size: 15rem;
+	  font-size: 15vw;
 	  font-weight: 600;
 	  letter-spacing: 0.5rem;
 	  opacity: 0;
@@ -62,12 +59,13 @@ $gutter-horizontal: 6rem;
 
 	  /* animation-iteration-count: 3; */
 	  /* animation-delay: 3s; */
-	  @media screen and (max-width: 1024px) {
-		font-size: 5.7rem;
-	  }
 	  @media screen and (max-width: 1224px) {
-		font-size: 3.7rem;
+		font-size: 12vw;
 		margin-left: 0;
+	  }
+
+	  @media screen and (max-width: 1024px) {
+		font-size: 10vw;
 	  }
 	}
   }
